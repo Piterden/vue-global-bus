@@ -1,5 +1,5 @@
 const eventbus = function (Vue) {
-  if (parseInt(Vue.version) < 2) {
+  if (typeof Vue === 'undefined' || parseInt(Vue.version) < 2) {
     return
   }
 
@@ -13,9 +13,7 @@ const eventbus = function (Vue) {
 }
 
 if ('undefined' !== typeof window) {
-  window.eventbus = eventbus
-
-  if (window.Vue) {
+  if (window && window.Vue) {
     window.Vue.use(eventbus)
   }
 }

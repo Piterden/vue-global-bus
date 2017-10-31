@@ -4,6 +4,8 @@
   "description": "The simple global event bus for vuejs v2",
   "main": "dist/vue-eventbus.js",
   "scripts": {
+    "dev": "node_modules/.bin/webpack src/vue-eventbus.js dist/vue-eventbus.js",
+    "watch": "node_modules/.bin/webpack --watch src/vue-eventbus.js dist/vue-eventbus.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

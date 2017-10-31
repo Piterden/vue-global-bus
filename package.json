@@ -1,6 +1,6 @@
 {
   "name": "vue-global-bus",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "The simple global event bus for vuejs v2",
   "main": "dist/vue-global-bus.js",
   "scripts": {

@@ -1,1 +1,1 @@
-# vue-eventbus
+# VueJS Global Events Bus Plugin

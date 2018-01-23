@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Piterden/vue-global-bus#readme",
   "devDependencies": {
-    "uglify-js": "^3.1.6",
-    "webpack": "^3.8.1"
+    "uglify-js": "^3.3.8",
+    "webpack": "^3.10.0"
   }
 }

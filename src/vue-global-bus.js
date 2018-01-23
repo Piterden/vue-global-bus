@@ -1,20 +1,18 @@
 const eventbus = {
-  install: function (Vue) {
+  install(Vue) {
     if (parseInt(Vue.version) < 2) {
       return false
     }
 
-    const bus = new Vue()
-
-    Object.defineProperty(Vue.prototype, '$bus', {
-      get: function () {
-        return bus
-      }
+    const bus = Object.defineProperty(Vue.prototype, '$bus', {
+      get() {
+        return new Vue()
+      },
     })
-  }
+  },
 }
 
-if ('undefined' !== typeof window && window.Vue) {
+if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(eventbus)
 }
 

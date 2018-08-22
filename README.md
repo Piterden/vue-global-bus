@@ -1,7 +1,6 @@
 # VueJS Eventbus Plugin
 
 [![awesome-vue](https://img.shields.io/badge/Vue.js-AWESOME-ff69b4.svg)](//github.com/vuejs/awesome-vue)
-[![license](https://img.shields.io/github/license/fffixed/vue-bus.svg)](//opensource.org/licenses/MIT)
 
 ## Introduction
 
@@ -17,9 +16,9 @@ $ npm i vue-global-bus -S
 
 Download and use with your build system
 ```js
-import VueBus from 'vue-bus'
+import VueBus from 'vue-global-bus'
 // or
-const VueBus = require('vue-bus')
+const VueBus = require('vue-global-bus')
 
 Vue.use(VueBus)
 ```

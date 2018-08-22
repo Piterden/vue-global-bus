@@ -1,3 +1,9 @@
-import bus from './vue-global-bus'
+import eventbus from './vue-global-bus'
 
-export default bus
+export default eventbus
+
+export { eventbus }
+
+module.exports = { eventbus }
+
+module.exports = eventbus

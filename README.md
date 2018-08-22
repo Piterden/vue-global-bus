@@ -9,55 +9,33 @@ A simple global event-bus plugin for [VueJS](//vuejs.org) (>= 2.0).
 
 This plugin implements [Non Parent-Child Communication](//vuejs.org/v2/guide/components.html#Non-Parent-Child-Communication).
 
-## Installation
+## Install
 
-```bash
-$ npm i
+```shell
+$ npm i vue-global-bus -S
 ```
 
 Download and use with your build system
-```javascript
+```js
 import VueBus from 'vue-bus'
-// ... maybe ...
-var VueBus = require('vue-bus')
-
-// ...  and  ...
+// or
+const VueBus = require('vue-bus')
 
 Vue.use(VueBus)
 ```
-Or just include it with a script tag
-```html
-<script src="/vue-bus.js"></script>
-```
-:sparkles:
 
 ## Usage
-direct way:
-```javascript
+
+```js
 // in component A's method
-this.$bus.$emit('my-event', 1)
+this.$bus.$emit('my-event', payload)
 
 // in component B's created hook
-this.$bus.$on('my-event', function(arg) {
+this.$bus.$on('my-event', (payload) => {
   // ...
 })
 ```
 
-magic way:
-```javascript
-// in component A's method
-this.$bus=['my-event', 1]
-
-// in component B create $bus option
-methods: { /* ... */ },
-$bus: {
-  'my-event': function(arg) {
-    // ...
-  }
-}
-```
-
 ## License
-[MIT](//opensource.org/licenses/MIT)
 
-Copyright (c) 2017 fffixed
+[MIT](//opensource.org/licenses/MIT)
